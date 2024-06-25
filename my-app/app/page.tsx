@@ -10,7 +10,7 @@ import { HoverBorderGradient } from "../components/ui/HoverBorderGradient";
 import { PinContainer } from "@/components/ui/3d-pin";
 import { Globe } from "@/components/ui/globe";
 import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
-import dynamic from "next/dynamic";
+import dynamic  from "next/dynamic";
 import { FlipWords } from "@/components/ui/flip-words";
 import { BackgroundGradient } from "@/components/ui/background-gradient";
 import { motion } from "framer-motion";
@@ -52,13 +52,13 @@ export default function Home() {
       <button
         className="p-[2px] relative rounded-full"
         onClick={() => {
-          // Find the section element by its ID
+          
           const section = document.getElementById('processo');
-          // If the section exists, scroll to it
+       
           if (section) {
             window.scrollTo({
-              top: section.offsetTop, // Get the top position of the section
-              behavior: 'smooth' // Optional: Enable smooth scrolling
+              top: section.offsetTop, 
+              behavior: 'smooth' 
             });
           }
         }}
@@ -72,9 +72,9 @@ export default function Home() {
       <button
         className="p-[2px] relative rounded-full"
         onClick={() => {
-          // Find the section element by its ID
+       
           const section = document.getElementById('produtos');
-          // If the section exists, scroll to it
+         
           if (section) {
             window.scrollTo({
               top: section.offsetTop, // Get the top position of the section
@@ -222,7 +222,6 @@ export default function Home() {
   </section>
 
     <section id= "sobre"
-    //SOBRE NOS
     className = "dark">
     <div className="mt-20 flex flex-col items-center justify-center ">
     <div className="absolute z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]">
@@ -235,7 +234,6 @@ export default function Home() {
         <ThreeDCardDemo1 />
       </div>
     </div>
-     
   </section>
 
 
@@ -573,7 +571,7 @@ export function BackgroundGradientDemo2() {
         </p>
  
         <p className="text-sm text-neutral-200 dark:text-neutral-400">
-          As your long-term AI partner, we're dedicated to continuously refine existing solutions to meet your ever-evolving needs.
+          As your long-term AI partner, we are dedicated to continuously refine existing solutions to meet your ever-evolving needs.
         </p>
       </BackgroundGradient>
     </div>
