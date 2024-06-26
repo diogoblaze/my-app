@@ -221,8 +221,7 @@ export default function Home() {
     <HoverBorderGradientDemo1 />
   </section>
 
-    <section id= "sobre"
-    className = "dark">
+  <section id= "sobre" className = "dark">
     <div className="mt-20 flex flex-col items-center justify-center ">
     <div className="absolute z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]">
     </div>
@@ -234,7 +233,8 @@ export default function Home() {
         <ThreeDCardDemo1 />
       </div>
     </div>
-    </section>
+    {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+  </section>
 
 
   
@@ -709,8 +709,8 @@ export function AnimatedPinDemo() {
                Diretor Executivo
             </span>
           </div>
-          <img src="/FotoDiogo.jpg" alt="Diogo" className="flex flex-1 w-full h-full object-cover rounded-lg mt-4" />
-        </div>
+          <Image src="/FotoDiogo.jpg" alt="Diogo" className="flex flex-1 w-full h-full object-cover rounded-lg mt-4" />
+          </div>
       </PinContainer>
     </div>
   );
@@ -730,9 +730,9 @@ export function AnimatedPinDemo1() {
             <span className="text-slate-500 ">
                Diretor de Tecnologia
             </span>
+            </div>
+          <Image src="/FotoCosta.jpg" alt="João" className="flex flex-1 w-full h-full object-cover rounded-lg mt-4" />
           </div>
-          <img src="/FotoCosta.jpeg" alt="João" className= "flex flex-1 w-full h-full object-cover rounded-lg mt-4" />
-        </div>
       </PinContainer>
     </div>
   );
