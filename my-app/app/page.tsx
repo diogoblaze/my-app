@@ -221,9 +221,9 @@ export default function Home() {
       <h1 className="text-5xl font-bold text-center text-slate-100">
         Sobre Nós
       </h1>
-      <div style={{ display: 'flex', justifyContent: 'center', gap: '30px' }}>
+      <div className = "flex items-center justify-center gap-20">
         <ThreeDCardDemo />
-        <ThreeDCardDemo1 />
+        <ThreeDCard />
       </div>
     </div>
     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
@@ -366,7 +366,7 @@ export function ThreeDCardDemo() {
   );
 }
 
-export function ThreeDCardDemo1() {
+export function ThreeDCard() {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white border-white border-2 w-auto sm:w-[25rem] h-auto rounded-xl p-8">
