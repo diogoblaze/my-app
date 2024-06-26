@@ -33,26 +33,26 @@ export default function Home() {
   return (
     
     <>
-    <TracingBeam className="px-6">
-    <section id="inicio">
+  <TracingBeam className="px-6">
+  <section id="inicio">
   <SparklesPreview />
   {/* add two buttons */}
-  <div className="flex justify-center gap-4 mt-[-7rem]">
-    <a href="#processo" className="p-[2px] relative rounded-full">
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
-        O Nosso Processo
-      </div>
-    </a>
+    <div className="flex justify-center gap-4 mt-[-7rem]">
+      <a href="#processo" className="p-[2px] relative rounded-full">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
+        <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
+          O Nosso Processo
+        </div>
+      </a>
 
-    <a href="#produtos" className="p-[2px] relative rounded-full">
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
-        Nossas Aplicações
-      </div>
-    </a>
-  </div>
-</section>
+      <a href="#produtos" className="p-[2px] relative rounded-full">
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
+        <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
+          Nossas Aplicações
+        </div>
+      </a>
+    </div>
+  </section>
 
       <FloatingNav
         navItems={[
@@ -191,10 +191,7 @@ export default function Home() {
       <h1 className="text-5xl font-bold text-center text-slate-100">
         Sobre Nós
       </h1>
-      <div className = "flex items-center justify-center gap-20">
-        <ThreeDCardDemo />
-        <ThreeDCard />
-      </div>
+      
     </div>
     {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
   </section>
