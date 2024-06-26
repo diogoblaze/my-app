@@ -77,8 +77,8 @@ export default function Home() {
          
           if (section) {
             window.scrollTo({
-              top: section.offsetTop, // Get the top position of the section
-              behavior: 'smooth' // Optional: Enable smooth scrolling
+              top: section.offsetTop, 
+              behavior: 'smooth' 
             });
           }
         }}
@@ -234,10 +234,10 @@ export default function Home() {
         <ThreeDCardDemo1 />
       </div>
     </div>
-  </section>
+    </section>
 
 
-  //Contactos
+  
   <section id="contactos" className = "mb-4">
     <h1 className="text-5xl font-bold text-center text-slate-100 z-10 mt-4 custom-line-height">
       Adorariamos Falar <br /> Consigo
@@ -258,13 +258,13 @@ export default function Home() {
 
 const CalendlyWidget = () => {
   useEffect(() => {
-    // Create script element
+   
     const script = document.createElement('script');
     script.src = 'https://assets.calendly.com/assets/external/widget.js';
     script.async = true;
     document.body.appendChild(script);
 
-    // Cleanup function to remove script when component unmounts
+    
     return () => {
       document.body.removeChild(script);
     };
@@ -377,7 +377,7 @@ export function ThreeDCardDemo() {
         <CardItem translateZ="80" className="w-full mt-4">
           <Image
             src="/FotoDiogobg1.jpg"
-            height={800} // Adjusted height
+            height={800}
             width={400}
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="Diogo Cordeiro"
@@ -419,7 +419,7 @@ export function ThreeDCardDemo1() {
         <CardItem translateZ="80" className="w-full mt-4">
           <Image
             src="/FotoJoaobg1.jpg"
-            height="300" // Adjusted height
+            height="300" 
             width="400"
             className="h-60 w-full object-cover rounded-xl group-hover/card:shadow-xl"
             alt="João Costa"
