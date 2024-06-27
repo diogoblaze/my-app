@@ -552,7 +552,7 @@ function HeroScrollDemo() {
         }
       >
         <Image
-          src={`/blazeverse1.webp`}
+          src={"/blazeverse.webp"}
           alt="BlazeVerse image"
           height={720}
           width={800}
