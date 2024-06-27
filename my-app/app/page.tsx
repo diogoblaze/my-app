@@ -294,7 +294,7 @@ const content = [
 ];
 
 
-export function ThreeDCardDemo() {
+function ThreeDCardDemo() {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white border-white border-2 w-auto sm:w-[25rem] h-auto rounded-xl p-8">
@@ -336,7 +336,7 @@ export function ThreeDCardDemo() {
   );
 }
 
-export function ThreeDCard() {
+function ThreeDCard() {
   return (
     <CardContainer className="inter-var">
       <CardBody className="bg-white relative group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white border-white border-2 w-auto sm:w-[25rem] h-auto rounded-xl p-8">
@@ -378,7 +378,7 @@ export function ThreeDCard() {
   );
 }
 
-export function SparklesPreview() {
+function SparklesPreview() {
   return (
     <div className="h-[45rem] w-full bg-black flex flex-col items-center justify-center overflow-hidden rounded-md">
       <h2 className="text-2xl font text-white">
@@ -416,7 +416,7 @@ export function SparklesPreview() {
 
 
 
-export function BackgroundGradientDemo() {
+function BackgroundGradientDemo() {
   return (
     <div>
       <BackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-10 bg-black dark:bg-zinc-900">
@@ -432,7 +432,7 @@ export function BackgroundGradientDemo() {
   );
 }
 
-export function BackgroundGradientDemo1() {
+function BackgroundGradientDemo1() {
   return (
     <div>
       <BackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-8 bg-black dark:bg-zinc-900">
@@ -448,7 +448,7 @@ export function BackgroundGradientDemo1() {
   );
 }
 
-export function BackgroundGradientDemo2() {
+function BackgroundGradientDemo2() {
   return (
     <div>
       <BackgroundGradient className="rounded-[22px] max-w-sm p-3 sm:p-8 bg-black dark:bg-zinc-900">
@@ -465,7 +465,7 @@ export function BackgroundGradientDemo2() {
 }
 
 
-export function HoverBorderGradientDemo() {
+function HoverBorderGradientDemo() {
   return (
     <div className="m-40 flex justify-center text-center">
       <HoverBorderGradient
@@ -479,7 +479,7 @@ export function HoverBorderGradientDemo() {
   );
 }
 
-export function HoverBorderGradientDemo1() {
+function HoverBorderGradientDemo1() {
   return (
     <div className="m-4 flex justify-center text-center">
       <HoverBorderGradient
@@ -494,7 +494,7 @@ export function HoverBorderGradientDemo1() {
 }
 
 
-export function AnimatedPinDemo() {
+function AnimatedPinDemo() {
   return (
     <div className="h-[40rem] w-full flex items-center justify-center ">
       <PinContainer
@@ -521,7 +521,7 @@ export function AnimatedPinDemo() {
 
  
  
-export function GridBackgroundDemo() {
+function GridBackgroundDemo() {
   return (
     <div className="dark">
       <div className="h-[50rem] w-full bg-dot-thick dark:bg-black bg-white grid-pattern relative flex items-center justify-center">
@@ -536,7 +536,7 @@ export function GridBackgroundDemo() {
 }
 
 
-export function HeroScrollDemo() {
+function HeroScrollDemo() {
   return (
     <div className="flex flex-col overflow-hidden">
       <ContainerScroll
@@ -566,7 +566,7 @@ export function HeroScrollDemo() {
 
 
 
-export function FooterAdvancedExample() {
+function FooterAdvancedExample() {
     return (
         <footer className="bg-black text-center text-white border-t border-white">
             <div className="container px-6 pt-6 mx-auto">
