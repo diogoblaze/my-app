@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { FloatingNav } from "../components/ui/floating-navbar"
 import { TracingBeam } from "../components/ui/tracing-beams";
 import { twMerge } from "tailwind-merge";
@@ -27,8 +27,6 @@ import Xarrow from "react-xarrows";
 import { TERipple } from "tw-elements-react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
-
-
 export default function Home() {
   return (
     
@@ -38,14 +36,26 @@ export default function Home() {
   <SparklesPreview />
   {/* add two buttons */}
   <div className="flex justify-center gap-4 mt-[-7rem]">
-    <a href="#processo" className="p-[2px] relative rounded-full">
+    <a href="#processo" className="p-[2px] relative rounded-full" onClick={(e) => {
+      e.preventDefault();
+      const targetElement = document.querySelector("#processo");
+      if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+  }}>
       <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
       <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
         O Nosso Processo
       </div>
     </a>
 
-    <a href="#produtos" className="p-[2px] relative rounded-full">
+    <a href="#produtos" className="p-[2px] relative rounded-full" onClick={(e) => {
+      e.preventDefault();
+      const targetElement = document.querySelector("#produtos");
+      if (targetElement) {
+          targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+  }}>
       <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
       <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
         Nossas Aplicações
@@ -93,8 +103,8 @@ export default function Home() {
 
       <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
         <a
-           id="block1" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-red-500 hover:shadow-red-500"
-          href="#"
+           id="block1" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
+          
         >
           <h1 className="text-4xl font-bold text-white">
             01.
@@ -116,7 +126,7 @@ export default function Home() {
           className="empty"
         ></a>
   <a
-          id= "block2" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"        href="#"
+          id= "block2" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600" 
         >
           <h1 className="text-4xl font-bold text-white">
             02.
@@ -131,7 +141,7 @@ export default function Home() {
         </a>
         <a
           id ="block3" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"    
-          href="#"
+          
         >
           <h1 className="text-4xl font-bold text-white">
             03.
@@ -152,7 +162,7 @@ export default function Home() {
         ></a>
   <a
           id = "block4" className="block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600" 
-          href="#"
+          
         > 
         <h1 className="text-4xl font-bold text-white">
         04.
@@ -169,9 +179,11 @@ export default function Home() {
         
       </div>
     {/* Xarrow components with curveness */}
+
     <Xarrow start="block1" end="block2" startAnchor="right" endAnchor="top" color="white" />
     <Xarrow start="block2" end="block3" startAnchor="left" endAnchor="top" color="white"/>
-    <Xarrow start="block3" end="block4" startAnchor="right" endAnchor="top" color="white" />
+    <Xarrow start="block3" end="block4" startAnchor="right" endAnchor="top" color="white"/>
+
     </div>
     
   </section>
@@ -217,7 +229,6 @@ export default function Home() {
   </>
   );
 }
-
 
 const CalendlyWidget = () => {
   useEffect(() => {
@@ -542,7 +553,7 @@ function HeroScrollDemo() {
       <ContainerScroll
         titleComponent={
           <>
-            <h1 className="text-4xl font-semibold text-black dark:text-white">
+            <h1 className="text-4xl font-semibold text-black dark:text-white mb-5">
               Todos os Produtos na <br />
               <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
                 BlazeVerse
@@ -648,7 +659,7 @@ function FooterAdvancedExample() {
             <div
                 className="p-4 text-center bg-gradient-to-r from-red-500 to-yellow-500">
                 BlazeTask:
-                <a className="text-white" href="https://tw-elements.com/"
+                <a className="text-white"
                 > Transforme O Seu Negócio</a>
             </div>
         </footer>
