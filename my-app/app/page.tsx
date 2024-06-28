@@ -26,6 +26,7 @@ import { SparklesCore } from "@/components/ui/sparkles";
 import Xarrow from "react-xarrows";
 import { TERipple } from "tw-elements-react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
+import ResponsiveXarrows from "@/components/ui/ResponsiveXarrows";
 
 export default function Home() {
   return (
@@ -182,9 +183,7 @@ export default function Home() {
       </div>
     {/* Xarrow components with curveness */}
         
-    <Xarrow start="block1" end="block2" startAnchor="right" endAnchor="top" color="white"/>
-    <Xarrow start="block2" end="block3" startAnchor="left" endAnchor="top" color="white"/>
-    <Xarrow start="block3" end="block4" startAnchor="right" endAnchor="top" color="white"/>
+    <ResponsiveXarrows />
 
     </div>
     
