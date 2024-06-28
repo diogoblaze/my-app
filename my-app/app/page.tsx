@@ -29,8 +29,10 @@ import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 
 export default function Home() {
   return (
-    
     <>
+    <Head>
+        <title>BlazeTask</title>
+    </Head>
     <TracingBeam className="px-6">
     <section id="inicio">
   <SparklesPreview />
@@ -44,8 +46,8 @@ export default function Home() {
       }
   }}>
       <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
-        O Nosso Processo
+      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
+        O Que Fazemos?
       </div>
     </a>
 
@@ -57,7 +59,7 @@ export default function Home() {
       }
   }}>
       <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full">
+      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
         Nossas Aplicações
       </div>
     </a>
@@ -179,8 +181,8 @@ export default function Home() {
         
       </div>
     {/* Xarrow components with curveness */}
-
-    <Xarrow start="block1" end="block2" startAnchor="right" endAnchor="top" color="white" />
+        
+    <Xarrow start="block1" end="block2" startAnchor="right" endAnchor="top" color="white"/>
     <Xarrow start="block2" end="block3" startAnchor="left" endAnchor="top" color="white"/>
     <Xarrow start="block3" end="block4" startAnchor="right" endAnchor="top" color="white"/>
 
@@ -196,20 +198,20 @@ export default function Home() {
     <HoverBorderGradientDemo1 />
   </section>
 
-  <section id= "sobre" className = "dark">
-    <div className="mt-20 flex flex-col items-center justify-center ">
+  <section id="sobre" className="dark">
+  <div className="mt-20 flex flex-col items-center justify-center">
     <div className="absolute z-[-2] h-screen w-screen bg-[#000000] bg-[radial-gradient(#ffffff33_1px,#000000_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_at_center,transparent_10%,black)]">
     </div>
-      <h1 className="text-5xl font-bold text-center text-slate-100">
-        Sobre Nós
-      </h1>
-      <div className = "flex items-center justify-center gap-20">
-        <ThreeDCardDemo />
-        <ThreeDCard />
-      </div>
+    <h1 className="text-5xl font-bold text-center text-slate-100">
+      Sobre Nós
+    </h1>
+    <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-5 gap-20">
+      <ThreeDCardDemo />
+      <ThreeDCard />
     </div>
-    {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
-  </section>
+  </div>
+  {/* eslint-disable-next-line react/jsx-no-comment-textnodes */}
+</section>
 
 
   
@@ -229,6 +231,7 @@ export default function Home() {
   </>
   );
 }
+
 
 const CalendlyWidget = () => {
   useEffect(() => {
@@ -303,6 +306,19 @@ const content = [
     ),
   },
 ];
+
+import Head from 'next/head';
+
+
+function MyHead () {
+  <Head>
+
+  <link rel="icon" href="/logo.png" type="image/png" />    {/* Other head elements */}
+  </Head>
+  {/* Your component content */}
+}
+
+
 
 
 function ThreeDCardDemo() {
@@ -396,7 +412,7 @@ function SparklesPreview() {
         O Futuro Do Seu Negócio 
       </h2>
 
-      <h1 className="md:text-8xl text-12xl lg:text-9xl font-bold text-center text-white relative z-20">
+      <h1 className="md:text-8xl text-12xl sm:text-6xl lg:text-9xl font-bold text-center text-white relative z-20">
         BLAZETASK
       </h1>
       <div className="w-[40rem] h-40 relative">
