@@ -1,4 +1,5 @@
 "use client";
+import Head from 'next/head';
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FloatingNav } from "../components/ui/floating-navbar"
@@ -117,8 +118,8 @@ export default function Home() {
           <h2 className="mt-4 text-xl font-bold text-white">Identificar Ineficiências</h2>
 
           <p className="mt-1 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-            distinctio alias voluptatum blanditiis laudantium.
+          Primeiro, analisamos como sua empresa funciona. Falamos com seus colaboradores e 
+          examinamos os processos para entender o fluxo de trabalho e identificar problemas
           </p>
         </a>
         <a
@@ -138,8 +139,8 @@ export default function Home() {
           <h2 className="mt-4 text-xl font-bold text-white">Propor soluções</h2>
 
           <p className="mt-1 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-            distinctio alias voluptatum blanditiis laudantium.
+          Com essa visão clara, avaliamos cada tarefa e apresentamos um relatório com as oportunidades 
+          de automação. Você decide quais implementar.
           </p>
         </a>
         <a
@@ -150,11 +151,11 @@ export default function Home() {
             03.
           </h1>
 
-          <h2 className="mt-4 text-xl font-bold text-white">Digital campaigns</h2>
+          <h2 className="mt-4 text-xl font-bold text-white">Implementação</h2>
 
           <p className="mt-1 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-            distinctio alias voluptatum blanditiis laudantium.
+          Usamos ferramentas avançadas para automatizar suas tarefas. Criamos soluções personalizadas 
+          para garantir uma transição fácil e eficiente, adaptadas às suas necessidades específicas.
           </p>
         </a>
         <a
@@ -172,11 +173,11 @@ export default function Home() {
           </h1>
           
 
-          <h2 className="mt-4 text-xl font-bold text-white">Propor soluções</h2>
+          <h2 className="mt-4 text-xl font-bold text-white">Suporte Contínuo</h2>
 
           <p className="mt-1 text-sm text-gray-300">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex ut quo possimus adipisci
-            distinctio alias voluptatum blanditiis laudantium.
+          Estamos sempre disponíveis para resolver problemas, ajustar sistemas e responder dúvidas. 
+          Garantimos que sua automação funcione sem interrupções, mantendo sua empresa eficiente.
           </p>
         </a>
         
@@ -204,7 +205,7 @@ export default function Home() {
     <h1 className="text-5xl font-bold text-center text-slate-100">
       Sobre Nós
     </h1>
-    <div className="flex flex-col sm:flex-row items-center justify-center sm:gap-5 gap-20">
+    <div className="flex flex-col sm:flex-row items-center justify-center gap-1 sm:gap-20">
       <ThreeDCardDemo />
       <ThreeDCard />
     </div>
@@ -250,7 +251,7 @@ const CalendlyWidget = () => {
     <div
       className="calendly-inline-widget"
       data-url="https://calendly.com/blazetaskpt/20min?hide_event_type_details=1&hide_gdpr_banner=1"
-      style={{ minWidth: '320px', height: '700px' }}
+      style={{ minWidth: '320px', height: '700px', borderRadius: '20px' }}
     ></div>
   );
 };
@@ -306,16 +307,7 @@ const content = [
   },
 ];
 
-import Head from 'next/head';
 
-
-function MyHead () {
-  <Head>
-
-  <link rel="icon" href="/logo.png" type="image/png" />    {/* Other head elements */}
-  </Head>
-  {/* Your component content */}
-}
 
 
 
@@ -411,7 +403,7 @@ function SparklesPreview() {
         O Futuro Do Seu Negócio 
       </h2>
 
-      <h1 className="md:text-8xl text-12xl sm:text-6xl lg:text-9xl font-bold text-center text-white relative z-20">
+      <h1 className="text-5xl xs:text-6xl sm:text-4xl md:text-8xl lg:text-9xl font-bold text-center text-white relative z-20">
         BLAZETASK
       </h1>
       <div className="w-[40rem] h-40 relative">
