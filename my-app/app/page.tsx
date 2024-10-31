@@ -28,46 +28,97 @@ import Xarrow from "react-xarrows";
 import { TERipple } from "tw-elements-react";
 import { ContainerScroll } from "@/components/ui/container-scroll-animation";
 import ResponsiveXarrows from "@/components/ui/ResponsiveXarrows";
+import { RetroGrid } from "@/components/ui/RetroGrid";
+import { ShootingStars } from '@/components/ui/shooting-stars';
+import { StarsBackground } from '@/components/ui/stars-background';
+
 
 export default function Home() {
   return (
     <>
-    <Head>
-        <title>BlazeTask</title>
-    </Head>
-    <TracingBeam className="px-6">
-    <section id="inicio">
-  <SparklesPreview />
-  {/* add two buttons */}
-  <div className="flex justify-center gap-4 mt-[-7rem]">
-    <a href="#processo" className="p-[2px] relative rounded-full" onClick={(e) => {
-      e.preventDefault();
-      const targetElement = document.querySelector("#processo");
-      if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-  }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
-        O Que Fazemos?
-      </div>
-    </a>
+   
+    
+      
+    <section className="relative flex items-center justify-center h-screen overflow-hidden">
+      {/* Header Content */}
+      <ShootingStars />
+      <StarsBackground />
+  <div className="relative mb-20 z-10 flex flex-col items-center text-center text-white px-8 mt-8">
+    {/* Logo */}
+    <div className="mb-4">
+      <img src="logo.webp" alt="Blazetask Logo" className="w-20 h-20" />
+    </div>
+    
+    {/* Title */}
+    <h1 className="text-7xl font-bold">Melhore o Seu Negócio com</h1>
+    <h1 className="text-7xl font-bold bg-gradient-to-r from-red-500 to-yellow-400 inline-block text-transparent bg-clip-text leading-none pb-3">
+      Inteligência Artificial
+    </h1>
 
-    <a href="#produtos" className="p-[2px] relative rounded-full" onClick={(e) => {
-      e.preventDefault();
-      const targetElement = document.querySelector("#produtos");
-      if (targetElement) {
-          targetElement.scrollIntoView({ behavior: 'smooth' });
-      }
-  }}>
-      <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
-      <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
-        Nossas Aplicações
-      </div>
-    </a>
+   {/* Subtitle */}
+    <p className="mt-2 text-lg text-gray-300">
+      A BlazeTask está aqui para o ajudar
+    </p>
+
+    {/* Buttons */}
+    <div className="flex justify-center gap-4 mt-6">
+      <a href="#processo" className="p-[2px] relative rounded-full" onClick={(e) => {
+        e.preventDefault();
+        const targetElement = document.querySelector("#processo");
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
+        <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
+          O Que Fazemos?
+        </div>
+      </a>
+
+      <a href="#produtos" className="p-[2px] relative rounded-full" onClick={(e) => {
+        e.preventDefault();
+        const targetElement = document.querySelector("#produtos");
+        if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth' });
+        }
+      }}>
+        <div className="absolute inset-0 bg-gradient-to-r from-red-500 to-yellow-500 rounded-full" />
+        <div className="px-5 py-2 bg-black relative group transition duration-200 text-white hover:bg-transparent rounded-full text-center flex justify-center items-center">
+          Nossas Aplicações
+        </div>
+      </a>
+    </div>
   </div>
-  </section>
 
+  {/* Retro Grid Effect */}{/*
+  <div
+    className="mt-10 pointer-events-none absolute inset-0 overflow-hidden opacity-50 [perspective:200px]"
+    style={{ "--grid-angle": "65deg" } as React.CSSProperties}
+  >
+    {/* Fading Background */}{/*
+    <div className="absolute inset-0 [background-image:linear-gradient(to_bottom,rgba(0,0,0,1)_50%,rgba(0,0,0,0)_0%)]" />
+
+    {/* Grid */}{/*
+    <div className="absolute align-center inset-0 [transform:rotateX(var(--grid-angle))]">
+      <div
+        className="[background-size:50px_40px] [height:200vh] [inset:0%_0px] [transform-origin:50%_0%_0] [width:100vw]
+        [background-image:linear-gradient(to_right,rgba(255,255,255,0.5)_1px,transparent_0%),linear-gradient(to_top,rgba(255,255,255,0.5)_1px,transparent_0%)]"
+      />
+    </div>
+  </div>
+ 
+
+{/* Gradient Overlay (for a fading effect at the bottom) */}{/*
+<div className="absolute top w-full h-1/4 bg-gradient-to-t from-transparent to-black" />
+<div className="absolute top-0 w-full h-1/4 bg-gradient-to-t from-black to-black" />
+<div className="absolute w-full h-1/6 bg-gradient-to-t from-transparent to-black" />
+<div className="absolute w-full h-1/6" style={{ backgroundImage: 'linear-gradient(to right, transparent 100%, black 100%)' }} />
+<div className="absolute w-full h-1/6" style={{ backgroundImage: 'linear-gradient(to left, transparent 100%, black 100%)' }} />*/}
+
+
+
+</section>
+  <TracingBeam className='px=6'>
       <FloatingNav
         navItems={[
           {
@@ -88,9 +139,9 @@ export default function Home() {
           },
         ]}
         className={twMerge("dark")}
+        
       />
 
-      
 
     <div className="flex items-center justify-center h-[15rem] relative">
       <div className="absolute inset-0 bg-transparent z-10">
@@ -102,93 +153,62 @@ export default function Home() {
       </h1>
     </div>
 
-  <section id= "processo" className="bg-black text-white mb-0 ">
-    <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
-
-      <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
-        <a
-           id="block1" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
-          
-        >
-          <h1 className="text-4xl font-bold text-white">
-            01.
-          </h1>
-
-
-          <h2 className="mt-4 text-xl font-bold text-white">Identificar Ineficiências</h2>
-
-          <p className="mt-1 text-sm text-gray-300">
-          Primeiro, analisamos como sua empresa funciona. Falamos com seus colaboradores e 
+  <section id="processo" className="bg-black text-white mb-0">
+  <div className="mx-auto max-w-screen-xl px-4 py-8 sm:px-6 sm:py-12 lg:px-8 lg:py-16">
+    <div className="mt-8 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-2">
+      <a
+        id="block1"
+        className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
+      >
+        <h1 className="text-4xl font-bold text-white">01.</h1>
+        <h2 className="mt-4 text-xl font-bold text-white">Identificar Ineficiências</h2>
+        <p className="mt-1 text-sm text-gray-300">
+          Primeiro, analisamos como sua empresa funciona. Falamos com seus colaboradores e
           examinamos os processos para entender o fluxo de trabalho e identificar problemas
-          </p>
-        </a>
-        <a
-          className="empty"
-        ></a>
-        
-        <a
-          className="empty"
-        ></a>
-  <a
-          id= "block2" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600" 
-        >
-          <h1 className="text-4xl font-bold text-white">
-            02.
-          </h1>
-
-          <h2 className="mt-4 text-xl font-bold text-white">Propor soluções</h2>
-
-          <p className="mt-1 text-sm text-gray-300">
-          Com essa visão clara, avaliamos cada tarefa e apresentamos um relatório com as oportunidades 
+        </p>
+      </a>
+      <a className="empty"></a>
+      <a className="empty"></a>
+      <a
+        id="block2"
+        className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
+      >
+        <h1 className="text-4xl font-bold text-white">02.</h1>
+        <h2 className="mt-4 text-xl font-bold text-white">Propor soluções</h2>
+        <p className="mt-1 text-sm text-gray-300">
+          Com essa visão clara, avaliamos cada tarefa e apresentamos um relatório com as oportunidades
           de automação. Você decide quais implementar.
-          </p>
-        </a>
-        <a
-          id ="block3" className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"    
-          
-        >
-          <h1 className="text-4xl font-bold text-white">
-            03.
-          </h1>
-
-          <h2 className="mt-4 text-xl font-bold text-white">Implementação</h2>
-
-          <p className="mt-1 text-sm text-gray-300">
-          Usamos ferramentas avançadas para automatizar suas tarefas. Criamos soluções personalizadas 
+        </p>
+      </a>
+      <a
+        id="block3"
+        className="content-block block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
+      >
+        <h1 className="text-4xl font-bold text-white">03.</h1>
+        <h2 className="mt-4 text-xl font-bold text-white">Implementação</h2>
+        <p className="mt-1 text-sm text-gray-300">
+          Usamos ferramentas avançadas para automatizar suas tarefas. Criamos soluções personalizadas
           para garantir uma transição fácil e eficiente, adaptadas às suas necessidades específicas.
-          </p>
-        </a>
-        <a
-          className="empty"
-        ></a>
-        <a
-          className="empty"
-        ></a>
-  <a
-          id = "block4" className="block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600" 
-          
-        > 
-        <h1 className="text-4xl font-bold text-white">
-        04.
-          </h1>
-          
-
-          <h2 className="mt-4 text-xl font-bold text-white">Suporte Contínuo</h2>
-
-          <p className="mt-1 text-sm text-gray-300">
-          Estamos sempre disponíveis para resolver problemas, ajustar sistemas e responder dúvidas. 
+        </p>
+      </a>
+      <a className="empty"></a>
+      <a className="empty"></a>
+      <a
+        id="block4"
+        className="block rounded-xl border border-white p-8 shadow-xl transition hover:border-yellow-600 hover:shadow-yellow-600"
+      >
+        <h1 className="text-4xl font-bold text-white">04.</h1>
+        <h2 className="mt-4 text-xl font-bold text-white">Suporte Contínuo</h2>
+        <p className="mt-1 text-sm text-gray-300">
+          Estamos sempre disponíveis para resolver problemas, ajustar sistemas e responder dúvidas.
           Garantimos que sua automação funcione sem interrupções, mantendo sua empresa eficiente.
-          </p>
-        </a>
-        
-      </div>
-    {/* Xarrow components with curveness */}
-        
-    <ResponsiveXarrows />
-
+        </p>
+      </a>
     </div>
-    
-  </section>
+    {/* Xarrow components with curveness */}
+    <ResponsiveXarrows />
+  </div>
+</section>
 
   <section id="produtos" className="dark flex flex-col items-center mt-[-8rem]">
     <HeroScrollDemo />
@@ -225,8 +245,9 @@ export default function Home() {
     <div className = "mb-28">
     <CalendlyWidget />
     </div>
-</section>     
-</TracingBeam>
+    
+  </section>     
+</TracingBeam> 
 <FooterAdvancedExample />
   </>
   );
@@ -511,6 +532,19 @@ function HoverBorderGradientDemo1() {
   );
 }
 
+export function ShootingStarsAndStarsBackgroundDemo() {
+  return (
+    <div className="h-[40rem] rounded-md bg-neutral-900 flex flex-col items-center justify-center relative w-full">
+      <h2 className="relative flex-col md:flex-row z-10 text-3xl md:text-5xl md:leading-tight max-w-5xl mx-auto text-center tracking-tight font-medium bg-clip-text text-transparent bg-gradient-to-b from-neutral-800 via-white to-white flex items-center gap-2 md:gap-8">
+        <span>Shooting Star</span>
+        <span className="text-white text-lg font-thin">x</span>
+        <span>Star Background</span>
+      </h2>
+      <ShootingStars />
+      <StarsBackground />
+    </div>
+  );
+}
 
 function AnimatedPinDemo() {
   return (
@@ -589,13 +623,13 @@ function FooterAdvancedExample() {
         <footer className="bg-black text-center text-white border-t border-white">
             <div className="container px-6 pt-6 mx-auto">
                 {/* <!-- Social media icons container --> */}
-                <div className="mb-6 gap-20 flex justify-center w-full">
+                <div className="mb-6 gap-8 flex justify-center w-full">
                     <TERipple rippleColor="light">
                         <a
 
                             type="button"
                             className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:bg-transparent flex items-center justify-center"
-                            href = "https://www.facebook.com/blazetask"
+                            href = "https://www.facebook.com/p/blazetask-61568133054981/"
                             target = "_blank"
                         >
                             <svg
@@ -611,25 +645,7 @@ function FooterAdvancedExample() {
 
                   
 
-                    <TERipple rippleColor="light">
-                        <a
-
-                            type="button"
-                            className="m-1 h-9 w-9 rounded-full border-2 border-white uppercase leading-normal text-white transition duration-150 ease-in-out hover:bg-black hover:bg-opacity-5 focus:bg-transparent flex items-center justify-center"
-
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                className="mx-auto h-full w-4"
-                                fill="currentColor"
-                                viewBox="0 0 24 24">
-                                <path
-                                    d="M7 11v2.4h3.97c-.16 1.029-1.2 3.02-3.97 3.02-2.39 0-4.34-1.979-4.34-4.42 0-2.44 1.95-4.42 4.34-4.42 1.36 0 2.27.58 2.79 1.08l1.9-1.83c-1.22-1.14-2.8-1.83-4.69-1.83-3.87 0-7 3.13-7 7s3.13 7 7 7c4.04 0 6.721-2.84 6.721-6.84 0-.46-.051-.81-.111-1.16h-6.61zm0 0 17 2h-3v3h-2v-3h-3v-2h3v-3h2v3h3v2z"
-                                    fillRule="evenodd"
-                                    clipRule="evenodd" />
-                            </svg>
-                        </a>
-                    </TERipple>
+          
 
 
                     <TERipple rippleColor="light">
@@ -667,7 +683,7 @@ function FooterAdvancedExample() {
                 className="p-4 text-center bg-gradient-to-r from-red-500 to-yellow-500">
                 BlazeTask:
                 <a className="text-white"
-                > Transforme O Seu Negócio</a>
+                > O Futuro Do Seu Negócio </a>
             </div>
         </footer>
     );

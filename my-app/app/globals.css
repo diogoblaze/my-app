@@ -44,3 +44,36 @@ body {
 
 
 
+/* Example CSS */
+.floating-nav {
+  display: flex;
+  flex-direction: column;
+}
+
+.floating-nav .nav-item {
+  display: flex;
+  align-items: center;
+}
+
+.floating-nav .nav-item img {
+  display: none; /* Hide images on mobile */
+}
+
+.floating-nav .nav-item span {
+  display: inline-block; /* Ensure text is displayed */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  .floating-nav {
+    flex-direction: column;
+  }
+
+  .floating-nav .nav-item img {
+    display: none; /* Hide images on mobile */
+  }
+
+  .floating-nav .nav-item span {
+    display: inline-block; /* Ensure text is displayed */
+  }
+}

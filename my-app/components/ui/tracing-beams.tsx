@@ -32,7 +32,7 @@ export const TracingBeam = ({
   }, []);
 
   const y1 = useSpring(
-    useTransform(scrollYProgress, [0, 0.8], [50, svgHeight]),
+    useTransform(scrollYProgress, [0, 0.8], [0, svgHeight]),
     {
       stiffness: 500,
       damping: 90,
@@ -51,7 +51,7 @@ export const TracingBeam = ({
       ref={ref}
       className={cn("relative w-full max-w-4xl mx-auto h-full", className)}
     >
-      <div className="absolute -left-4 md:-left-20 top-3">
+      <div className="absolute -left-4 md:-left-20 top-5">
         <motion.div
           transition={{
             duration: 0.2,
@@ -98,7 +98,7 @@ export const TracingBeam = ({
           <motion.path
             d={`M 1 0V -36 l 18 24 V ${svgHeight * 0.8} l -18 24V ${svgHeight}`}
             fill="none"
-            stroke="url(#gradient)"
+            stroke="url(#tracing-gradient)"
             strokeWidth="1.25"
             className="motion-reduce:hidden"
             transition={{
@@ -107,7 +107,7 @@ export const TracingBeam = ({
           ></motion.path>
           <defs>
             <motion.linearGradient
-              id="gradient"
+              id="tracing-gradient"
               gradientUnits="userSpaceOnUse"
               x1="0"
               x2="0"
